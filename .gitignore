@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env*
+dist/
+build/
+.cache/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Data/artifacts
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+reports/figures/*
+!reports/figures/.gitkeep
+
+# IDE
+.idea/
+.vscode/
+.DS_Store
+
+# LaTeX
+paper/local/*.aux
+paper/local/*.bbl
+paper/local/*.blg
+paper/local/*.fdb_latexmk
+paper/local/*.fls
+paper/local/*.log
+paper/local/*.synctex.gz
+paper/local/*.pdf
