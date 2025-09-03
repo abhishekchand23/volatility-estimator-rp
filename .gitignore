@@ -32,3 +32,4 @@ paper/local/*.fls
 paper/local/*.log
 paper/local/*.synctex.gz
 paper/local/*.pdf
+/.venvvolrp/
