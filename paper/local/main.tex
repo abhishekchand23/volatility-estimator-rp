@@ -1,25 +1,34 @@
-\documentclass[11pt]{article}
-\usepackage[margin=1in]{geometry}
-\usepackage{graphicx}
-\usepackage{amsmath,amssymb}
+\documentclass[12pt]{article}
+
+% ---------- Packages ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb}
 \usepackage{natbib}
-\usepackage[colorlinks=true]{hyperref}
+\bibliographystyle{ecta}   % Econometrica-style citations
 
-\title{Project Title}
-\author{Your Name}
-\date{\today}
+% ---------- Title ----------
+\title{\textbf{A Computational Method to Generate a Family of Extreme-Value Volatility Estimators}}
+\author{Abhishek Chand\thanks{This writing sample reflects only the author’s contribution. It draws on an ongoing project with Dr.\ Rakesh Nigam (Madras School of Economics), Prachi Srivastava (Paris School of Economics), and Parush Arora (UC Irvine). Approaches and estimators developed by co-authors are not presented here. The author thanks them for valuable discussions and acknowledges simulation support in Python (author) and R (Parush Arora).}}
+\date{October 03, 2024}
 
-\begin{document}\maketitle
-\begin{abstract}A short abstract.\end{abstract}
+% ---------- Document ----------
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper develops a constructive algorithm to generate a family of unbiased extreme-value volatility estimators when log prices follow Brownian motion with drift and jumps. The approach unifies existing estimators---Parkinson, Garman--Klass, Rogers--Satchell, and Yang--Zhang---as special cases and yields new minimum-variance estimators. Simulations confirm efficiency gains and demonstrate applicability when only OHLC data are available.
+\end{abstract}
 
 \section{Introduction}
-We cite \citep{smith2023example}. See Figure~\ref{fig:ex}.
+Volatility estimation is fundamental in asset pricing, risk management, and option valuation. Existing estimators based on daily close-to-close returns discard valuable intraday information. Starting with \citet{parkinson1980ExtremeValueMethod} and \citet{garman1980EstimationSecurityPrice}, researchers have developed estimators using high, low, open, and close (OHLC) prices that improve efficiency substantially. Later contributions include \citet{rogers1991EstimatingVarianceHigh} and \citet{yang2000DriftIndependentVolatilityEstimation}, who address bias under drift and overnight jumps, and \citet{meilijson2009GarmanKlassVolatilityEstimator}, who further improve efficiency by compressing range data.
 
-\begin{figure}[h]\centering
+This paper introduces a unified, constructive framework that systematically derives the family of unbiased estimators under a given price process and information set. Known estimators emerge as special cases, and the method yields new minimum-variance estimators, including an improved high--low estimator that dominates the Parkinson estimator in efficiency.
 
-\caption{Example figure.}\label{fig:ex}
-\end{figure}
+\section{Conclusion}
+This paper develops a null-space-based constructive method for volatility estimation, recovers existing estimators, and derives new minimum-variance estimators. The approach is constructive, adaptable to more complex price processes, and suitable for multi-asset extensions. Future research may apply this method to stochastic volatility models and empirical financial data.
 
-\bibliographystyle{plainnat}
-\bibliography{refs}
+\bibliography{my}
+
 \end{document}
